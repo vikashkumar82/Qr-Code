@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.scanner-main {
+    text-align: center;
+}
+
+.scanner-main img {
+    border: 1px solid #dcdbd8;
+}
+
+.leftSide-qrCode.p-4 {
+    border: 1px solid #D2D6D8;
+    border-radius: 5px;
+    background: #F7FAFC;
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15)!important;
+}
+.leftSide-qrCode.p-4 p {
+    font-size: larger;
+}
+
+
+
+@media only screen and (max-width:767px){
+
+
+
+    div#reader {
+      border-radius: 5px;
+      padding: 0px !important;
+      border: 1px solid #D2D6D8 !important;
+      background-color: white;
+      width: 100%;
+  }
+}

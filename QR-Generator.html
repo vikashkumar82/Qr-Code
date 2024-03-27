@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QR Code</title>
+        <link rel="stylesheet" href="generatorStyle.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container maindiv">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="QR-Tools mt-5 p3">
+                        <h3 style="text-align: center;">Generate QR Code | Free
+                            QR Code Generator/Scanner</h3>
+                        <div class="leftSide-qrCode p-4">
+                            <center><p>QR Code Generator</p></center>
+                            <input type="text" name id="qrtext"
+                                placeholder="Enter Your Text/Link Here"
+                                class="form-control">
+                            <!-- <textarea name id="qrtext"
+                                placeholder="Enter Your Text/Link Here"
+                                cols="15" rows="4" class="form-control"></textarea> -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <strong>Select Size</strong>
+                                    <select name="Select" id="size"
+                                        class="form-control">
+                                        <option value="100">100*100</option>
+                                        <option value="150">150*150</option>
+                                        <option value="200">200*200</option>
+                                        <option value="250"
+                                            selected>250*250</option>
+                                        <option value="300">300*300</option>
+                                        <option value="300">406*406</option>
+                                        <option value="300">522*522</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <strong>Select Color</strong>
+                                    <select id="color" class="form-control">
+                                        <option value="000000">Black</option>
+                                        <option value="FFFFFF">White</option>
+                                        <option value="FF0000">Red</option>
+                                        <option value="00FF00">Green</option>
+                                        <option value="0000FF">Blue</option>
+                                        <option value="FFFF00">Yellow</option>
+                                        <option value="FF00FF">Pink</option>
+                                        <option value="00FFFF">Cyan</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 pt-4">
+                                    <a href="./Scanner.html"  class="btn btn-warning form-control" >Scanner</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <div class="pt-4">
+                                        <input id="btn" type="submit"
+                                            value="Genarate QR Code"
+                                            onclick="genQr()"
+                                            class="btn btn-outline-primary form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="scanner-main mt-5">
+                                <img src id="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="4">
+
+                </div>
+            </div>
+        </div>
+        <script src="GeneratorScript.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

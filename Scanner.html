@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ScannerStyle.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/8e1d3b8195.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container scanner-hero">
+      <div class="scanner mt-5 p-3">
+        <!-- QR SCANNER CODE BELOW  -->
+        <div class="row">
+          <div class="col-md-8">
+            <div class="main-scanner">
+              <center><h2>QR Code Reader/Scanner</h2></center>
+              <div class="scanner-tool mt-3 p-3">
+                <span style="float: left;"><a href="QR-Generator.html" style="text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Go Back</a></span>
+                <div id="reader"></div>
+                <div class style="padding: 30px">
+                  <h4>Scan Result </h4><br>
+                  <div id="result">
+                    Result goes here
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.2.0/html5-qrcode.min.js"></script>
+
+    <script>
+  // When scan is successful fucntion will produce data
+function onScanSuccess(qrCodeMessage) {
+  document.getElementById("result").innerHTML =
+    '<span class="result">' + qrCodeMessage + "</span>";
+}
+
+// When scan is unsuccessful fucntion will produce error message
+function onScanError(errorMessage) {
+  // Handle Scan Error
+}
+// Setting up Qr Scanner properties
+var html5QrCodeScanner = new Html5QrcodeScanner("reader", {
+  fps: 10,
+  qrbox: 250
+});
+// in
+html5QrCodeScanner.render(onScanSuccess, onScanError);
+
+</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
